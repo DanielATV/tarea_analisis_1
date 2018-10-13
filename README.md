@@ -12,8 +12,8 @@ Para poder usar pgcrypto debemos crear la extensión<br/>
 
 Luego hacemos nuestras tablas<br/>
 > CREATE TABLE users (
->   id uuid NOT NULL DEFAULT gen_random_uuid() PRIMARY KEY, /* id (aleatoria) del usuario */
->   email text NOT NULL, /* email del usuario */
->   password text NOT NULL, /* contraseña del usuario */
->   name text NOT NULL /* nombre del usuario */
-> );
+>   id uuid NOT NULL DEFAULT gen_random_uuid() PRIMARY KEY, /* id (aleatoria) del usuario */<br/>
+>   email text NOT NULL, /* email del usuario */<br/>
+>   password text NOT NULL, /* contraseña del usuario */<br/>
+>   name text NOT NULL /* nombre del usuario */<br/>
+> );<br/>
