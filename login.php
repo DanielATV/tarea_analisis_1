@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+	include 'funciones.php'
+?>	
 <head>
 	<title>Login V1</title>
 	<meta charset="UTF-8">
@@ -30,7 +33,7 @@
 					<img src="images/img-01.png" alt="IMG">
 				</div>
 
-				<form class="login100-form validate-form">
+				<form action="chequeo.php" class="login100-form validate-form" method="POST">
 					<span class="login100-form-title">
 						Member Login
 					</span>
@@ -58,8 +61,8 @@
 					</div>
 
 					<div class="text-center p-t-136">
-						<a class="txt2" href="./registro.html">
-							Create your Account
+						<a class="txt2" href="./registro.php">
+							Crea tu cuenta
 							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
 						</a>
 					</div>
