@@ -22,7 +22,7 @@
             <!-- <img src="images/signup-bg.jpg" alt=""> -->
             <div class="container">
                 <div class="signup-content">
-                    <form action="./login.php" id="signup-form" class="signup-form">
+                    <form action="./login.php" id="signup-form" class="signup-form" method="POST">
                         <h1 class="form-title">Cuenta Creada Satisfactoriamente</h1>
                         <div class="form-group">
                             <input type="submit" name="submit" id="submit" class="form-submit" value="Ir al login" />
