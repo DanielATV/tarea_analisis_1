@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Registro Exitoso</title>
+    <title>Registro Fallido</title>
 
     <!-- Font Icon -->
     <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
@@ -23,7 +23,11 @@
             <div class="container">
                 <div class="signup-content">
                     <form action="./login.php" id="signup-form" class="signup-form" method="POST">
-                        <h1 class="form-title">Cuenta Creada Satisfactoriamente</h1>
+                        <h1 class="form-title">Su cuenta no pudo ser creada</h1>
+                        <br>
+                        <p> Por favor reintente sin dejar ningún campo en blanco,
+                        o si ya utilizó su correo anteriormente inicie sesión con su cuenta</p>
+                        <br><br><br><br>
                         <div class="form-group">
                             <input type="submit" name="submit" id="submit" class="form-submit" value="Volver al login" />
                         </div>
