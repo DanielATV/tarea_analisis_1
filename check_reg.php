@@ -34,7 +34,7 @@
         redirect('./error_reg.php');
     } else {
         $result = pg_query($db,"INSERT INTO users (email, password, name) VALUES (lower('$email'), crypt('$pas', gen_salt('bf', 8)),'$name');");
-        redirect('./exito_reg');
+        redirect('./exito_reg.php');
     }
 ?>
 <body></body>
