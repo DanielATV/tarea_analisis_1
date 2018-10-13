@@ -1,4 +1,4 @@
-# tarea_analisis_1
+# Login y registro de usuarios
 
 #### Tablas Encriptadas (postgres)
 
@@ -22,4 +22,16 @@ CREATE TABLE users (
 );
 ```
 ##### Insertando en las tablas
+
+Para insertar un usuario debemos usar la siguiente sintaxis en la BD
+```
+/* No insertamos en la columna id por la funcion gen_random_uuid() que nos genera una id automática */
+/* Usamos lower($email) para obtener un email que no sea sensible a las mayúsculas */
+/* La función crypt() recibe dos parámetros la contraseña como tal y gen_salt() la 
+   cual añade un valor al hash para protegerlo contra ataques tipo diccionario */
+   
+INSERT INTO users (email, password, name) VALUES (lower('$email'), crypt('$pas', gen_salt('bf', 8)),'$name');
+
+```
+
 
