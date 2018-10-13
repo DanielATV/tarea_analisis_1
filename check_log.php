@@ -15,16 +15,10 @@
 </head>
 <?php
     if(strcmp($_POST["user"],'') == 0){
-        // echo "Usuario vacío";
-        echo '<meta http-equiv="refresh" content="2; URL=./error_reg.php">';
-        echo '<meta name="keywords" content="automatic redirection">';
-        // redirect('./error_reg.php');
+        redirect('./incorrect_pair.php');
     }
     if(strcmp($_POST["pass"],'') == 0){
-        // echo "Contraseña vacía";
-        echo '<meta http-equiv="refresh" content="2; URL=./error_reg.php">';
-        echo '<meta name="keywords" content="automatic redirection">';
-        // redirect('./error_reg.php');
+        redirect('./incorrect_pair.php');
     }
     $db = connect_bd();
     $pass = $_POST["pass"];
