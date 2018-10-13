@@ -24,11 +24,10 @@
         echo "No hay match de contraseñas";
         redirect('./error_reg.php');
     }
-    echo "Conectando BD...";
     $db = connect_bd();
     $pas = $_POST["password"];
-    $email = $_POST["email"];
     $name = $_POST["name"];
+    $email = $_POST["email"];
     $query_string = "SELECT * FROM users WHERE email = '$email'";
     $test = pg_query($query_string);
     if(pg_num_rows($test) > 0){
@@ -38,20 +37,5 @@
         redirect('./exito_reg');
     }
 ?>
-<body>
-        <table>
-                <?php
-                    foreach ($_POST as $key => $value) {
-                        echo "<tr>";
-                        echo "<td>";
-                        echo $key;
-                        echo "</td>";
-                        echo "<td>";
-                        echo $value;
-                        echo "</td>";
-                        echo "</tr>";
-                    }
-                ?>
-                </table>
-</body>
+<body></body>
 </html>
