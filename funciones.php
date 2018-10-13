@@ -1,7 +1,7 @@
 <?php
     function connect_bd()
     {
-        $db = pg_connect("host=localhost port=5432 dbname=users user=postgres password=warofworld") or die('connection failed');
+        $db = pg_connect("host=localhost port=5432 dbname=usuarios user=postgres password=warofworld") or die('connection failed');
         if (!$db) {
             echo "Ha ocurrido un error.\n";
         exit;
