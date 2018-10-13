@@ -1,4 +1,12 @@
-<!DOCTYPE html>
+<!-- 
+    Parametros recibidos en el POST
+    $_POST["name"] -- nombre usuario
+    $_POST["email"] -- correo a verificar
+    $_POST["password"] -- contraseña
+    $_POST["re_password"] -- reiteración de contraseña
+    $_POST["submit"] -- no sirve de nada
+-->
+<!DOCTYPE html> 
 <html lang="en">
 <?php
     include 'funciones.php'

@@ -33,7 +33,7 @@
 					<img src="images/img-01.png" alt="IMG">
 				</div>
 
-				<form action="chequeo.php" class="login100-form validate-form" method="POST">
+				<form action="check_log.php" class="login100-form validate-form" method="POST">
 					<span class="login100-form-title">
 						Member Login
 					</span>

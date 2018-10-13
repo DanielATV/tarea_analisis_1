@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+    include 'funciones.php'
+?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +23,7 @@
             <!-- <img src="images/signup-bg.jpg" alt=""> -->
             <div class="container">
                 <div class="signup-content">
-                    <form method="POST" id="signup-form" class="signup-form">
+                    <form action="./check_reg.php" method="POST" id="signup-form" class="signup-form">
                         <h2 class="form-title">Crea tu cuenta</h2>
                         <div class="form-group">
                             <input type="text" class="form-input" name="name" id="name" placeholder="Nombre"/>
