@@ -4,7 +4,7 @@
 	include 'funciones.php'
 ?>	
 <head>
-	<title>-- Login --</title>
+	<title>Home</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -33,38 +33,21 @@
 					<img src="images/img-01.png" alt="IMG">
 				</div>
 
-				<form action="check_log.php" class="login100-form validate-form" method="POST">
+				<form action="./login.php" class="login100-form validate-form" method="POST">
 					<span class="login100-form-title">
-						Inicio de Sesión
+						Home
 					</span>
-
-					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<input class="input100" type="text" name="user" placeholder="Email">
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
-							<i class="fa fa-envelope" aria-hidden="true"></i>
-						</span>
-					</div>
-
-					<div class="wrap-input100 validate-input" data-validate = "Password is required">
-						<input class="input100" type="password" name="pass" placeholder="Contraseña">
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
-							<i class="fa fa-lock" aria-hidden="true"></i>
-						</span>
-					</div>
-					
+					<p>Bienvenido, 
+					<?php 
+						$nombre = $_GET['nombre'];
+						echo " $nombre";
+					?>
+					</p>
+					<br><br>
 					<div class="container-login100-form-btn">
 						<button class="login100-form-btn">
-							Iniciar Sesión
+							Salir
 						</button>
-					</div>
-
-					<div class="text-center p-t-136">
-						<a class="txt2" href="./registro.php">
-							Crea tu cuenta
-							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
-						</a>
 					</div>
 				</form>
 			</div>

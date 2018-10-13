@@ -36,7 +36,10 @@
     if(pg_num_rows($pair_query) == 0){
         redirect('./incorrect_pair.php');
     }
-    redirect('./home.php');
+    $row = pg_fetch_assoc($pair_query);
+    $nombre = $row["name"];
+    $url = "./home.php?nombre=". $nombre;
+    redirect($url);
 ?>
 <body>
 </body>
