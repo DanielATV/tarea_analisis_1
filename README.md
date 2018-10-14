@@ -34,4 +34,14 @@ INSERT INTO users (email, password, name) VALUES (lower('$email'), crypt('$pas',
 
 ```
 
+##### Identificando a usuarios
+
+Para seleccionar usuarios de la BD la sintaxis es la siguiente
+```
+/* Verificamos que exista el correo proporcionado como filtro principal */
+SELECT * FROM users WHERE email = lower('$email');
+/* Verificamos que exista el correo proporcionado como filtro principal y que la contraseña sea la correcta verificando el hash */
+SELECT * FROM users WHERE email = lower('$email') AND password = crypt('$pass', password);
+```
+
 
