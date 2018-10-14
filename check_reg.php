@@ -28,7 +28,7 @@
     $pas = $_POST["password"];
     $name = $_POST["name"];
     $email = $_POST["email"];
-    $query_string = "SELECT * FROM users WHERE email = '$email'";
+    $query_string = "SELECT * FROM users WHERE email = lower('$email')";
     $test = pg_query($query_string);
     if(pg_num_rows($test) > 0){
         redirect('./error_reg.php');
