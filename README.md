@@ -44,4 +44,27 @@ SELECT * FROM users WHERE email = lower('$email');
 SELECT * FROM users WHERE email = lower('$email') AND password = crypt('$pass', password);
 ```
 
+##### Conexion BD mediante PHP
+
+Para poder conectar a postgres con PHP debemos modificar ``funciones.php`` en la funcion ``connect_bd()``<br/>
+Donde nuestra configuración será
+```
+/*
+    Reemplazar:
+        $host -> con el host a utilizar (comunmente localhost)
+        $port -> puerto al cual esta abierto la base de datos (comunmente 5432)
+        $dbname -> la base de datos con la tabla de usuarios
+        $user -> el usuario con acceso a la base de datos (comunmente postgres)
+        $pass -> contraseña para el acceso a postgres
+*/
+function connect_bd()
+{
+    $db = pg_connect("host=$host port=$port dbname=$dbname user=$user password=$pass") or die('connection failed');
+    if (!$db) {
+        echo "Ha ocurrido un error.\n";
+    exit;
+    }
+    return $db;
+}
+```
 
