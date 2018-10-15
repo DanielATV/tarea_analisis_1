@@ -26,7 +26,7 @@
     $query_string = "SELECT * FROM users WHERE email = lower('$email');";
     $test = pg_query($query_string);
     if(pg_num_rows($test) == 0){
-        echo '<meta http-equiv="refresh" content="2; URL=./no_registrado.php">';
+        echo '<meta http-equiv="refresh" content="2; URL=./incorrect_pair.php">';
         echo '<meta name="keywords" content="automatic redirection">';
         redirect('./no_registrado.php');
     }
